@@ -8,18 +8,23 @@ html {
     text-align: center;
     padding: 1em;
     margin-bottom: 1em;;
+    background-image: url(../images./egypt.jpg);
+    background-size: 100%;
 }
 .categories {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     /* použijte auto-fit s šířkou sloupce minimálně 300px */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: minmax(300px, 600px);
     padding: 1em;
     gap: 1em;
 }
 .categories__item {
     position: relative;
     color: inherit;
+    border-radius: 20px;
     /* max-height: 80vh; */
 }
 .categories__item:hover {
@@ -27,11 +32,22 @@ html {
 }
 .categories__item-image {
     filter: brightness(0.9) saturate(1) contrast(1);
+    border-radius: 20px;
 }
 .categories__item-description {
     padding: 1em;
     color: var(--text-light);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
 }
+
+.categories__item-description:hover {
+    transform: translateY(-50%)
+}
+
+
 /* TODO */
 
 
